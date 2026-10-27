@@ -1,0 +1,20 @@
+﻿<Window x:Class="ClientUi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientUi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closed="Close_Window">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top">
+            <Label FontSize="15" FontWeight="Bold" Margin="10">Message :</Label>
+            <Button Click="ConnectButton_Click" Margin="5" Padding="20 10" DockPanel.Dock="Right" Background="#FF4BDA2E" FontSize="14" FontWeight="Bold" Foreground="#FFFBFBFB">Connect</Button>
+            <Button Margin="5" Padding="20 10" DockPanel.Dock="Right" Click="DisconnectButton_Click" FontSize="14" Background="#FFD90D0D" Foreground="#FFFAFAFA" FontWeight="Bold">Disconnect</Button>
+            <Button Margin="5" Padding="20 10" DockPanel.Dock="Right" Click="Send_Button_Click" Background="#FF4079F5" Foreground="White" FontWeight="Bold" FontSize="14">Send</Button>
+            <TextBox x:Name="msgTextBox" VerticalContentAlignment="Center" Margin="5"></TextBox>
+        </DockPanel>
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontWeight="Bold" FontSize="25">Chat</TextBlock>
+        <ListBox ItemsSource="{Binding}"></ListBox>
+    </DockPanel>
+</Window>
